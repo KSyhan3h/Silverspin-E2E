@@ -1,0 +1,22 @@
+{
+  "name": "silverspin-e2e",
+  "version": "1.0.0",
+  "description": "E2E BDD testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber"
+  ],
+  "author": "frnacilla",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "allure-cypress": "^3.2.1",
+    "cypress": "^14.3.2",
+    "esbuild": "^0.25.3"
+  }
+}

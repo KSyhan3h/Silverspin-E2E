@@ -1,0 +1,16 @@
+{
+    "siteFeatures": {
+        "title": "Clip Articles, Obituaries, Photos, and more",
+        "content": [
+            "Clippings are an easy way to keep track of interesting things you find on Newspapers.com™. With a Newspapers.com™ account you can clip an article or an entire page, and once its clipped, you can easily find it again or share it with friends. You can also follow a newspaper, follow another member's profile, or save a search—and receive notifications when they're updated.",
+            "The Newspapers.com™ viewer is a powerful tool that lets you explore a newspaper page in detail, clip a page or article, and print, save, or share what you find. When you find something on Newspapers.com that you would like to have a copy of, you can print the image directly from the viewer or you can download the image and save a digital copy."
+        ],
+        "image": "Historical photo of a couple from the newspapers"
+    },
+    "about": {
+        "title": "About Newspapers.com™",
+        "content": 
+            "The largest online newspaper archive, established in 2012. Used by millions for genealogy and family history, historical research, crime investigations, journalism, and entertainment. Search for obituaries, marriage announcements, birth announcements, social pages, national and local news articles, sports, advertisements, entertainment, fashion and lifestyle pages, comics, and more. Everything you’d expect in the paper—and maybe something you didn't!"
+        
+    }
+}
