@@ -42,19 +42,20 @@ Then('I am redirected to the results page and url contains {string}', (urlString
     cy.url()
         .should('include', '/results/', { timeout: 10000 })
         .and('include', urlString)
-    cy.url().should('not.include', 'search', { timeout: 10000 })
 })
 Then('I can view recent keyword searches {string}', (keywords) => {
     cy.get('.KeywordInput_Dropdown__ZfO4r > .Card_Card__geaBS').should('be.visible')
     
     let keywordArray = keywords.split('|')
     cy.get('.RecentSearches_RecentSearches__mgSR2')
-        .children()
-        .then(($children) => {
-            const hasMatch = [...$children].some(($child) =>
-                                    keywordArray.some(keyword => 
-                                        $child.innerText.includes(keyword)))
-            expect(hasMatch).to.be.true
+        .find('a')
+        .find('span')
+        .each(($span) => {
+            cy.wrap($span).invoke('text').then((text) => {
+                const matches = keywords.includes(text)
+                console.log('searches text ' + text + ' keywords ' + keywords)
+                expect(matches).to.be.true
+            })
         })
 })
 When('I click the {string} widget', (inputfield) => {

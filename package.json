@@ -4,7 +4,9 @@
   "description": "E2E BDD testing",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress run",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open"
   },
   "keywords": [
     "cypress",

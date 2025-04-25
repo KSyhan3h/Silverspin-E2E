@@ -1,5 +1,5 @@
 @homepage
-Feature: Homepage Search 
+Feature: Homepage Search Form
     The user is able to input information to search what they want  
     The user receives results based on what they entered 
     The user is able to access the search widgets 

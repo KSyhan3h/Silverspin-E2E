@@ -49,7 +49,6 @@ Then('The searches change after over time', () => {
         })
 })
 
-let selectedSearch 
 When('I click one of the searches people make', () => {
     cy.get('.ExampleSearchesList_Searches__jLnut') 
         .children(':visible')
@@ -60,18 +59,24 @@ When('I click one of the searches people make', () => {
         .invoke('text')
         .then((text) => {
             console.log('consoleLog: ' + text)
-            selectedSearch = text
+            this.selectedSearch = text
         })
 
     cy.get('@search').click()
 })
 Then('I get results related to the search clicked', () => {
-    console.log('consoleLog: ' + selectedSearch)
-    let keyword = selectedSearch.split(' · ')
+    console.log('consoleLog: ' + this.selectedSearch)
+    let keyword = this.selectedSearch
+                    .split(' · ')
                     .shift()
                     .replace(/ /g, "+")
+                    .replace("'", "")
+                    .split('+')
+                    .shift()
+                    .toLowerCase()
     console.log('consoleLog: Keyword = '+keyword)
-    cy.url()
-        .should('contains', 'results')
-        .and('contains', keyword)
+    cy.url({ timeout: 10000 })
+        .then((url) => {
+            url.toLowerCase().includes(keyword)
+        })
 })

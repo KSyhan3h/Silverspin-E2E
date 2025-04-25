@@ -1,4 +1,4 @@
-Feature: Search Form
+Feature: Search Page - Search Form
 
     Background: The user is on the Search Page 
         Given I visit the page "search"

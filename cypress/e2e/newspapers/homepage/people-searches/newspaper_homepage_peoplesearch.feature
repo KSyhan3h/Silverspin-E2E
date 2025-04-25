@@ -1,5 +1,5 @@
 @homepage
-Feature: People Searches
+Feature: Common searches by other users in the Homepage
     The user is able to check the different searches of other users
     The user is able to access results for other people's searches
 

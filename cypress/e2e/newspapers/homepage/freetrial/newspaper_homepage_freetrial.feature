@@ -1,5 +1,5 @@
 @homepage
-Feature: Try 7 Days Free Trial 
+Feature: Try 7 Days Free Trial in Homepage
 
     Background: The user is on the homepage
         Given I visit the page "homepage"
